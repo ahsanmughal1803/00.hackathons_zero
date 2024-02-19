@@ -19,7 +19,7 @@ import { Menu } from "./icons/menu"
          <Menu/>
          </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-32">
+        <DropdownMenuContent className="w-40">
             <DropdownMenuItem>
               <FolderPlus className="mr-2 h-4 w-4" />
               <span>Add to Album</span>
