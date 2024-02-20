@@ -29,10 +29,15 @@ import { Pencil } from "lucide-react"
              <AddToAlumDialog image={image}  onClose={()=> setOpen(false)}/>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-             <Link href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}>
+            <Button  className="cursor-pointer flex justify-start pl-4"
+            asChild 
+            variant="ghost">
+             <Link 
+             href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}>
               <Pencil className="mr-2 h-4 w-4"/>
               Edit
              </Link>
+             </Button>
             </DropdownMenuItem>
             </DropdownMenuContent>
             </DropdownMenu>

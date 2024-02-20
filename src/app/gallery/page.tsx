@@ -2,6 +2,7 @@
 import UploadButton from "./upload-button";
 import cloudinary from "cloudinary";
 import GalleryGrid from "./gallery-grid";
+import { SearchForm } from "./search-form";
 
 export type SearchResult={
    public_id: string
@@ -9,14 +10,18 @@ export type SearchResult={
 
 }
 
-export default  async function GalleryPage(){
+export default  async function GalleryPage({ searchParams: { search} }: {
+    searchParams: {
+        search: string,
+    }
+}){
 
 
     const results = (await cloudinary.v2.search
-        .expression('resource_type:image')
+        .expression(`resource_type:image${search ? ` AND tags=${search}`: ""}`)
         .sort_by('created_at','desc')
         .with_field('tags')
-        .max_results(30)
+        .max_results(100)
         .execute()) as {resources: SearchResult[]}
 
         
@@ -28,9 +33,8 @@ export default  async function GalleryPage(){
         <h1 className="text-4xl font-bold">GALLERY</h1>
       <UploadButton/>
       </div>
-      <GalleryGrid
-      images={results.resources}
-      />
+      <SearchForm initialSearch={search}/>
+      <GalleryGrid images={results.resources} />
       
       </div>  
         </section>  
