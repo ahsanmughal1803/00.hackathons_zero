@@ -13,7 +13,6 @@ import { Folder } from "./page"
 import Link from "next/link"
 
 
-
 export function AlbumCard({ folder }:{folder:Folder}) {
   return (
     <Card>

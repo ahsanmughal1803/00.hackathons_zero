@@ -7,9 +7,6 @@ import { Heart } from "@/components/icons/heart";
 import Link from "next/link";
 import cloudinary from "cloudinary"
 import { Folder } from "./albums/page";
-import { BiPhotoAlbum } from "react-icons/bi";
-
-
 
 
 const inter = Inter({ subsets: ["latin"] });

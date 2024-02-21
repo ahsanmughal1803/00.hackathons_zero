@@ -9,5 +9,5 @@ export function ForceRefresh(){
     useEffect(() => {
       router.refresh();
     }, [])
-    return<></>
+ return<></>
 }
