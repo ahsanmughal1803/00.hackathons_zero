@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2422d7eb12ffc7747d1c5fe93e5ec04c8300facb
 const config = {
   darkMode: ["class"],
   content: [
@@ -76,6 +79,10 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+<<<<<<< HEAD
 } 
+=======
+} satisfies Config
+>>>>>>> 2422d7eb12ffc7747d1c5fe93e5ec04c8300facb
 
 export default config

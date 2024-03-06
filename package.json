@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "e-commerce",
+=======
+  "name": "cloudinary-photo-app",
+>>>>>>> 2422d7eb12ffc7747d1c5fe93e5ec04c8300facb
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@sanity/image-url": "^1.0.2",
@@ -24,6 +29,23 @@
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "use-shopping-cart": "^3.2.0"
+=======
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "cloudinary": "^2.0.1",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.331.0",
+    "next": "14.1.0",
+    "next-cloudinary": "^5.20.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
+>>>>>>> 2422d7eb12ffc7747d1c5fe93e5ec04c8300facb
   },
   "devDependencies": {
     "@types/node": "^20",
