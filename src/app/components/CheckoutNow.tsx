@@ -5,34 +5,36 @@ import { useShoppingCart } from "use-shopping-cart";
 import { urlFor } from "../lib/sanity";
 import { ProductCart } from "./AddToBag";
 
-
 export default function CheckoutNow({
-    name, 
-    description, 
-    price, 
-    currency, 
-    image,
-    price_id,
-}: ProductCart){
- const {checkoutSingleItem} = useShoppingCart();
+  currency,
+  description,
+  image,
+  name,
+  price,
+  price_id,
+}: ProductCart) {
+  const { checkoutSingleItem } = useShoppingCart();
 
-  function buyNow(price_id:string){
-    checkoutSingleItem(price_id);
+  function buyNow(priceId: string) {
+    checkoutSingleItem(priceId);
   }
 
- const product = {
+  const product = {
     name: name,
     description: description,
     price: price,
     currency: currency,
     image: urlFor(image).url(),
     price_id: price_id,
- };
- return( 
-   <Button onClick={() => {
+  };
+  return (
+    <Button
+      variant="outline"
+      onClick={() => {
         buyNow(product.price_id);
-       }}
+      }}
     >
-     Checkout Now
+      Checkout Now
     </Button>
-)}
+  );
+}
